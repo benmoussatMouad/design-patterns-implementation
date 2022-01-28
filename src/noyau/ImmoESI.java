@@ -15,12 +15,12 @@ import java.util.*;
 
 
 public class ImmoESI implements Serializable{
-    private GestionnareBien gestionnaireBien;
+    private GestionnaireBien gestionnaireBien;
 
 
     private Admin admin ;
 
-    public ImmoESI(GestionnareBien gestionnaireBien)    //Constructeur
+    public ImmoESI(GestionnaireBien gestionnaireBien)    //Constructeur
     {
         this.gestionnaireBien = gestionnaireBien;
     }
@@ -40,7 +40,7 @@ public class ImmoESI implements Serializable{
     }
     public void archiverBien(Bien b)
     {
-        //What is this
+        gestionnaireBien.archiverBien(b);
     }
 
     // Modifier les informations d'un bien
@@ -60,7 +60,7 @@ public class ImmoESI implements Serializable{
     
     public Bien Recherche_Bien(String num_serie)
     {
-        return gestionnaireBien.rechercheBien( num_serie );
+        return gestionnaireBien.Recherche_Bien( num_serie );
     }
 
     public void sauvegarder(){
